@@ -1,0 +1,208 @@
+/* ============================================
+   MENU SECTION
+   ============================================ */
+
+.menu {
+  background-color: var(--color-cream);
+}
+
+/* --- En-tête --- */
+.menu__header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-10);
+}
+
+.menu__title {
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+  margin-top: var(--space-2);
+}
+
+.menu__title em {
+  font-style: italic;
+  color: var(--color-orange);
+}
+
+.menu__intro {
+  font-size: var(--text-md);
+  color: var(--color-text-secondary);
+  max-width: 44ch;
+  line-height: var(--leading-relaxed);
+}
+
+/* --- Recherche --- */
+.menu__search-wrap {
+  margin-bottom: var(--space-6);
+}
+
+.menu__search {
+  position: relative;
+  max-width: 480px;
+}
+
+.menu__search-icon {
+  position: absolute;
+  left: var(--space-4);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-secondary);
+  pointer-events: none;
+}
+
+.menu__search-input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4) var(--space-3) calc(var(--space-4) + 18px + var(--space-3));
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background-color: var(--color-white);
+  font-size: var(--text-sm);
+  font-family: var(--font-sans);
+  color: var(--color-brown-deep);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.menu__search-input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.menu__search-input:focus {
+  outline: none;
+  border-color: var(--color-orange);
+  box-shadow: 0 0 0 3px rgba(242, 106, 33, 0.12);
+}
+
+/* Masquer le bouton clear natif sur input[type=search] */
+.menu__search-input::-webkit-search-cancel-button { display: none; }
+
+.menu__search-clear {
+  position: absolute;
+  right: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-border);
+  color: var(--color-text-secondary);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.menu__search-clear:hover {
+  background: var(--color-orange);
+  color: white;
+}
+
+/* --- Filtres --- */
+.menu__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.menu__filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-border);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.menu__filter-btn:hover {
+  border-color: var(--color-orange);
+  color: var(--color-orange);
+  background-color: var(--color-orange-subtle);
+}
+
+.menu__filter-btn--active {
+  background-color: var(--color-orange);
+  border-color: var(--color-orange);
+  color: var(--color-white);
+}
+
+.menu__filter-btn--active:hover {
+  background-color: var(--color-orange-dark);
+  border-color: var(--color-orange-dark);
+  color: var(--color-white);
+}
+
+/* --- Grille de plats --- */
+.menu__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  min-height: 200px;
+}
+
+/* --- État vide --- */
+.menu__empty {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-16) var(--space-4);
+  text-align: center;
+}
+
+.menu__empty-icon {
+  color: var(--color-orange);
+  opacity: 0.6;
+}
+
+.menu__empty-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  color: var(--color-brown-deep);
+}
+
+.menu__empty-text {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  max-width: 30ch;
+}
+
+/* --- Compteur --- */
+.menu__count {
+  margin-top: var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+/* --- Responsive --- */
+@media (min-width: 640px) {
+  .menu__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .menu__header {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+

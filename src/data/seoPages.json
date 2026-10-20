@@ -1,0 +1,22 @@
+{
+  "/": {
+    "title": "Restaurant à Bamako | Chez Tanti Choco",
+    "description": "Découvrez Chez Tanti Choco à Bamako : une cuisine généreuse, des spécialités maison et une carte à parcourir avant de composer votre commande."
+  },
+  "/about": {
+    "title": "Notre histoire | Chez Tanti Choco, restaurant à Bamako",
+    "description": "Découvrez l’esprit de Chez Tanti Choco à Bamako : une cuisine conviviale, des assiettes généreuses et le plaisir de partager un repas."
+  },
+  "/specialites": {
+    "title": "Spécialités maison à Bamako | Chez Tanti Choco",
+    "description": "Explorez les spécialités de Chez Tanti Choco à Bamako et découvrez les plats qui composent la cuisine de la maison."
+  },
+  "/menu": {
+    "title": "Carte et plats à Bamako | Chez Tanti Choco",
+    "description": "Consultez la carte de Chez Tanti Choco à Bamako : découvrez les plats, leurs descriptions et leurs prix, puis composez votre commande."
+  },
+  "/contact": {
+    "title": "Contact et adresse | Chez Tanti Choco à Bamako",
+    "description": "Retrouvez les informations de contact de Chez Tanti Choco à Bamako et envoyez votre demande à l’équipe du restaurant."
+  }
+}

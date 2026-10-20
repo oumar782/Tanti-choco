@@ -1,0 +1,63 @@
+.home-invitation {
+  padding: clamp(3.5rem, 7vw, 6rem) 0;
+  background: var(--color-brown-deep);
+  color: var(--color-white);
+}
+
+.home-invitation__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.home-invitation .category-label {
+  color: var(--color-orange);
+}
+
+.home-invitation h2 {
+  margin-top: 0.5rem;
+  color: var(--color-white);
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.7rem);
+  font-weight: 400;
+}
+
+.home-invitation .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+@media (max-width: 640px) {
+  .home-invitation__inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.home-invitation {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 84% 48%, rgba(242,106,33,.19), transparent 34%),
+    linear-gradient(118deg, #211812, #392516);
+}
+
+.home-invitation::after {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,.12) .7px, transparent .7px);
+  background-size: 16px 16px;
+  content: '';
+  opacity: .12;
+  pointer-events: none;
+}
+
+.home-invitation__inner { position: relative; z-index: 1; }
+.home-invitation h2 { letter-spacing: -.025em; }
+.home-invitation .btn { box-shadow: 0 12px 30px rgba(217,84,22,.24); }
+
+@media (max-width: 640px) {
+  .home-invitation .btn { width: 100%; justify-content: center; }
+}
